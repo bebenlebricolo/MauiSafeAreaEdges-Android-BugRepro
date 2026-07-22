@@ -15,3 +15,7 @@ That's the reproduction: the header has moved and buttons are now behing the And
 
 Rotate the phone in landscape mode => header is reset to a properly working position.
 Rotate back to the portrait mode => header is now at the right spot again.
+
+# Bug ticket
+Here is the bug ticket I wrote to track this issue:
+[MAUI Issue 36728](https://github.com/dotnet/maui/issues/36728).
