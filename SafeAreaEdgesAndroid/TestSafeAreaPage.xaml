@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:safeAreaEdgesAndroid="clr-namespace:SafeAreaEdgesAndroid"
+             x:Class="SafeAreaEdgesAndroid.TestSafeAreaPage"
+             Shell.NavBarIsVisible="False"
+             Title="Page en construction">
+    <ContentPage.SafeAreaEdges>All</ContentPage.SafeAreaEdges>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowDefinitions="auto,auto,auto"
+                  RowSpacing="10">
+                <safeAreaEdgesAndroid:CustomHeaderControl Grid.Row="0"
+                                                          ItemsBackgroundColor="DodgerBlue"
+                                                          CornerRadius="40"
+                                                          BorderColor="Transparent"
+                                                          PageTitle="Page en construction ...!" />
+                <Label Grid.Row="1"
+                       Text="Cette page n'existe pas encore ! Repassez plus tard 😀!"
+                       FontSize="20"
+                       Margin="0,20,0,0"
+                       FontAutoScalingEnabled="True"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       LineBreakMode="WordWrap" />
+
+                <Grid Grid.Row="2"
+                      RowDefinitions="auto">
+                    <Border Margin="10"
+                            StrokeShape="RoundRectangle 40">
+                        <Image Source="dotnet_bot.png"
+                               Aspect="AspectFit" />
+                    </Border>
+                    <Border Margin="20"
+                            Stroke="Transparent"
+                            BackgroundColor="#CC333333"
+                            StrokeShape="RoundRectangle 30"
+                            HeightRequest="50"
+                            VerticalOptions="Start"
+                            Padding="10,0">
+                        <Label Text="J'y travaille ... !"
+                               TextColor="WhiteSmoke"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" />
+                    </Border>
+                </Grid>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

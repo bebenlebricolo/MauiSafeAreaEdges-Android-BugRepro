@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SafeAreaEdgesAndroid.CustomHeaderControl"
+             xmlns:root="clr-namespace:SafeAreaEdgesAndroid"
+             xmlns:local="clr-namespace:SafeAreaEdgesAndroid"
+             x:DataType="local:CustomHeaderControl"
+             x:Name="CustomControl">
+    <ContentView.SafeAreaEdges>All</ContentView.SafeAreaEdges>
+    <Grid
+        ColumnDefinitions="*,*,*"
+        VerticalOptions="Start"
+        ColumnSpacing="10">
+        <Border Grid.Column="0"
+                x:Name="FlyoutButtonBorder"
+                Margin="0"
+                Padding="9"
+                HeightRequest="40"
+                WidthRequest="40"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Stroke="Transparent">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer x:DataType="root:AppShell"
+                                      Tapped="FlyoutMenuButton_OnTapped" />
+            </Border.GestureRecognizers>
+            <Image Source="hamburger_icon.svg"
+                   Aspect="AspectFit" />
+        </Border>
+        <Grid Grid.Column="2"
+              ColumnDefinitions="auto,auto"
+              VerticalOptions="Start"
+              HorizontalOptions="End"
+              ColumnSpacing="3"
+              BackgroundColor="Transparent">
+            <Label x:Name="TitleLabel"
+                   TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   FontSize="15"
+                   BackgroundColor="Transparent" />
+            <Border x:Name="PageIconBorder"
+                    Grid.Column="1"
+                    StrokeShape="RoundRectangle 40"
+                    Stroke="Transparent"
+                    Padding="7"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    HorizontalOptions="End">
+                <Image x:Name="HeaderIcon" />
+            </Border>
+        </Grid>
+    </Grid>
+</ContentView>
