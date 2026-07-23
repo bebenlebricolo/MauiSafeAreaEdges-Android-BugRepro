@@ -1,5 +1,6 @@
 # Maui Android SafeAreaEdges bug repro project
 This small template MAUI Android project showcases a strange placement Bug due to recent SafeAreaEdge property introduction in MAUI (10+).
+This behavior can be observed from MAUI 10.0.20 up until 10.0.90.
 
 ## How to reproduce the bug
 Open the solution (Visual Studio, Rider, VSCode ?) and build the project in Debug.
@@ -11,7 +12,7 @@ Use the top left button (the ugly blue circle at the top left corner), this will
 Click on Main Page and go back to the Test page, via the Flyout path.
 
 After one or two round trips, the blue header of the TestPage should be placed at the very top of the screen, hidden behind the Android status bar!
-That's the reproduction: the header has moved and buttons are now behing the Android Status bar.
+That's the reproduction: the header has moved and buttons are now behind the Android Status bar.
 
 Rotate the phone in landscape mode => header is reset to a properly working position.
 Rotate back to the portrait mode => header is now at the right spot again.
