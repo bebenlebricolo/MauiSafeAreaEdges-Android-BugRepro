@@ -19,6 +19,22 @@
             <ShellContent ContentTemplate="{DataTemplate local:TestSafeAreaPage}"></ShellContent>
         </Tab>
     </FlyoutItem>
+    
+    <FlyoutItem
+        Title="TestPage2"
+        Route="TestSafeAreaPage">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:TestSafeAreaPage}"></ShellContent>
+        </Tab>
+    </FlyoutItem>
+    
+    <FlyoutItem
+        Title="TestPage3"
+        Route="TestSafeAreaPage">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:TestSafeAreaPage}"></ShellContent>
+        </Tab>
+    </FlyoutItem>
 
 
 </Shell>

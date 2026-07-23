@@ -5,16 +5,35 @@
              x:Class="SafeAreaEdgesAndroid.MainPage"
              Shell.FlyoutBehavior="Flyout">
     <ContentPage.SafeAreaEdges>All</ContentPage.SafeAreaEdges>
-            <VerticalStackLayout>
-                <Button x:Name="CounterBtn"
+    <VerticalStackLayout>
+        <Button x:Name="CounterBtn"
                         Text="Go to test page !"
                         Clicked="OnCounterClicked"
                         HorizontalOptions="Fill" />
-                    <Image
+        <Image
                         Source="dotnet_bot.png"
                         HeightRequest="450"
                         Aspect="AspectFit"
                         HorizontalOptions="Center" />
-            </VerticalStackLayout>
+        <Border Grid.Row="3"
+            Margin="20"
+            Stroke="Transparent"
+            BackgroundColor="#CC333333"
+            StrokeShape="RoundRectangle 30"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Padding="10,0">
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="MauiVersion:"
+                   TextColor="WhiteSmoke"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+                <Label x:Name="MauiVersionLabel"
+                   TextColor="DodgerBlue"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+        </Border>
+    </VerticalStackLayout>
 
 </ContentPage>

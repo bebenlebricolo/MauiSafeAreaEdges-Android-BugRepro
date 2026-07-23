@@ -47,7 +47,6 @@
                                HorizontalOptions="Center" />
                     </Border>
                 </Grid>
-
             </Grid>
         </ScrollView>
     </ContentPage.Content>
